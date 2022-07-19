@@ -3,13 +3,13 @@ const router = express.Router()
 const {
     getGoals,
     setGoal,
-    putGoals,
+    updateGoals,
     deleteGoals,
 } = require("../controllers/goalController")
 
 router.get("/", getGoals)
 router.post("/", setGoal)
-router.put("/:id", putGoals)
+router.put("/:id", updateGoals)
 router.delete("/:id", deleteGoals)
 
 module.exports = router
