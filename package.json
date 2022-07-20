@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node src/api/server.js",
         "server": "nodemon src/api/server.js",
-        "client": "npm start --prefix frontend"
+        "client": "npm start --prefix frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\" "
     },
     "keywords": [],
     "author": "",
@@ -20,6 +21,7 @@
         "mongoose": "^6.4.5"
     },
     "devDependencies": {
+        "concurrently": "^7.3.0",
         "nodemon": "^2.0.19"
     }
 }
