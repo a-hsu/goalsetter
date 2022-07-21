@@ -1,8 +1,8 @@
 const path = require("path")
 const express = require("express")
 const dotenv = require("dotenv").config()
-const { errorHandler } = require("./middleware/errorMiddleware")
-const connectDB = require("./config/db")
+const { errorHandler } = require("./api/middleware/errorMiddleware")
+const connectDB = require("./api/config/db")
 connectDB()
 
 const app = express()
@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 4000
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.use("/api/goals", require("./Routes/goals"))
-app.use("/api/users", require("./Routes/users"))
-app.use("/api/tasks", require("./Routes/tasks"))
+app.use("/api/goals", require("./api/Routes/goals"))
+app.use("/api/users", require("./api/Routes/users"))
+app.use("/api/tasks", require("./api/Routes/tasks"))
 
 // Serve Frontend
 if (process.env.NODE_ENV === "production") {
