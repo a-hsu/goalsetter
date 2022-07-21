@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use("/api/goals", require("./Routes/goals"))
 app.use("/api/users", require("./Routes/users"))
+app.use("/api/tasks", require("./Routes/tasks"))
 
 // Serve Frontend
 if (process.env.NODE_ENV === "production") {

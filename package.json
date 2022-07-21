@@ -2,7 +2,7 @@
     "name": "goalsetter",
     "version": "1.0.0",
     "description": "Goal Tracker app",
-    "main": "api/server.js",
+    "main": "index.js",
     "scripts": {
         "start": "node src/api/server.js",
         "server": "nodemon src/api/server.js",
